@@ -24,13 +24,13 @@ plt.xlabel('Anos')
 plt.ylabel('Concentracao de CO2')
 plt.title('Concentração de CO2 no  tempo')
 plt.legend('Cconcentracao')
-plt.savefig('serie_temporal.tiff', format='tiff', dpi =200)
+plt.savefig('serie_temporal.png', format='png', dpi =200)
 plt.show()
 
 
 decomposicao =seasonal_decompose(concentracao,period =7, model ='additive')
 decomposicao.plot()
-plt.savefig('decomposicao_aditiva.tiff', format='tiff', dpi =200)
+plt.savefig('decomposicao_aditiva.png', format='png', dpi =200)
 plt.show()
 
 plt.subplot(411)
@@ -51,5 +51,5 @@ plt.show()
 
 decomposicao_mult =seasonal_decompose(concentracao,period =7, model ='multiplicative')
 decomposicao_mult.plot()
-plt.savefig('decomposicao_multiplicativa.tiff', format='tiff', dpi =200)
+plt.savefig('decomposicao_multiplicativa.png', format='png', dpi =200)
 plt.show()
